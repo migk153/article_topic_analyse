@@ -1,0 +1,42 @@
+﻿<html>
+  <head>
+    <title>찾고 있는 주제 : {{topic}}</title>
+    <style>
+       #layout   {background-color:white; width:1350px; margin:0 auto;}
+       #left   {background-color:white; float:left; width:1050; height:700px; text-align:center}
+       #right   {background-color:white; float:right; width:300; height:700px;}
+       #inside {background-color:white; float:left; width:1050; height:630px; display:inline-block}
+    </style>
+  </head>
+<body>
+
+  <div id='layout'>
+      <div id='left'>
+        {% if articles %}
+        <div id='inside'>
+          <h2>찾고 있는 주제 : {{topic}}</h2>
+          <iframe name='main' width=100% height=100% marginwidth='0' marginheight='0' scrolling='yes' frameborder='0' vspace='0' hspace='0'>
+          </iframe>
+        </div>
+        {% else %}
+        <div id='inside'>
+          <h2>찾고 있는 주제가 없습니다. 다시 시도해주세요.</h2>
+          <iframe name='main' width=100% height=100% marginwidth='0' marginheight='0' scrolling='yes' frameborder='0' vspace='0' hspace='0'>
+          </iframe>
+        </div>
+        {% endif %}
+      </div>
+      <div id='right'>
+        <br><br><br>
+        <table border='0' cellspacing='5'>
+        {% for n in articles %}
+          <tr>
+            <td span=1><a href='{{n['url']}}' target='main'><p>{{n['title']}}</p></a></td>
+          </tr>
+        {% endfor%}
+        </table>
+      </div>
+  </div>
+
+</body>
+</html>

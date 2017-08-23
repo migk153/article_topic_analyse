@@ -1,0 +1,22 @@
+﻿<html>
+  <head>
+    <title>주제를 골라주세요</title>
+    <style>
+       #layout   {background-color:white; width:1350px; margin:0 auto; text-align:center}
+       #left   {background-color:white; width:400px; height:200px; margin:200px; display:inline-block}
+    </style>
+  </head>
+<body>
+  <div id='layout'>
+    <div id='left' >
+        <form action="/recommend_article" method="post" name="login">
+            <label for="topic"><h1>찾으려는 주제? </h1></label>
+            <h5><p>컴퓨팅 파워의 부족으로 Naver 뉴스의
+              IT/과학 카테고리로 제한되어 있습니다</p></h5>
+            <input type="text" name="topic" />
+            <input type="submit" value='검색'/>
+        </form>
+    </div>
+  </div>
+</body>
+</html>
