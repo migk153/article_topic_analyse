@@ -7,10 +7,8 @@ import datetime
 
 # DAO
 '''
-Data Acess Object
-실제로 data를 다루는 모듈을 dao라 함
-save_neww(), get_news_by_id() 와 같이 인터페이스를 정의하여
-데이터를 사용하는 쪽에서는 실제 db에 접근하는 코드를 최소화 함
+NewsDAO라는 MySQL에 저장하는 클래스를 작성
+저장하기 전에 Crawling한 데이터가 저장되어 있는지 조회
 '''
 
 class NewsDAO(object):
